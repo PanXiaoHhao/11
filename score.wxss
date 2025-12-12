@@ -1,0 +1,153 @@
+.container { padding: 40rpx; background-color: #fff9e6; }
+
+.title { 
+  display: block;
+  text-align: center; 
+  font-size: 36rpx; 
+  font-weight: bold; 
+  margin: 40rpx 0;
+  color: #333;
+}
+
+/* Tab栏样式 */
+.tab-bar {
+  display: flex;
+  margin: 20rpx 0;
+  border-bottom: 2rpx solid #eee;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.tab.active {
+  color: #ff9900;
+  border-bottom: 4rpx solid #ff9900;
+  font-weight: bold;
+}
+
+/* 表格样式不变，复用原逻辑 */
+.table { background: #fff; border-radius: 20rpx; overflow: hidden; box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.08); }
+.table-header { display: flex; background: #f0f0f0; padding: 30rpx 20rpx; font-weight: bold; font-size: 28rpx; color: #333; }
+.table-row { display: flex; padding: 30rpx 20rpx; font-size: 28rpx; color: #333; border-bottom: 1rpx solid #eee; }
+.table-row:nth-child(even) { background: #fafafa; }
+
+.c1 { flex: 2.5; padding-left: 20rpx; }
+.c2 { flex: 2; text-align: center; }
+.c3, .c4 { flex: 1.5; text-align: center; }
+
+/* 时间筛选样式 */
+.filter-section {
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin: 20rpx 0;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+.filter-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.filter-row {
+  display: flex;
+  margin-bottom: 20rpx;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.filter-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 300rpx;
+}
+
+.filter-item.full-width {
+  flex: 1 1 100%;
+}
+
+.filter-label {
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 20rpx;
+  min-width: 120rpx;
+}
+
+.picker {
+  flex: 1;
+  background-color: #f8f8f8;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+  border: 2rpx solid #e0e0e0;
+}
+
+.filter-button-row {
+  display: flex;
+  justify-content: center;
+  gap: 30rpx;
+  margin-top: 10rpx;
+}
+
+.filter-button {
+  flex: 1;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 20rpx;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  margin: 0;
+  font-weight: bold;
+}
+
+.filter-button.reset {
+  background-color: #666;
+}
+
+/* 加载状态样式 */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100rpx 0;
+  background-color: white;
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+.loading-text {
+  font-size: 32rpx;
+  color: #ff9900;
+  text-align: center;
+}
+
+/* 空数据提示样式 */
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100rpx 0;
+  background-color: white;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+.empty-text {
+  font-size: 32rpx;
+  color: #999;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="header">
+    <text class="big-title">更新请登录教务系统</text>
+    <text class="school">汝州职业技术学院</text>
+  </view>
+
+  <view class="form">
+    <input placeholder="请输入学号" class="input" bindinput="idInput" value="{{studentId}}" />
+    <input placeholder="请输入教务系统密码" class="input" password="{{true}}" bindinput="pwdInput" value="{{password}}" />
+    <text class="error-tip">{{errorTip}}</text>
+    <button class="login-btn" loading="{{loading}}" bindtap="login">
+      {{loading ? '验证中...' : '登录'}}
+    </button>
+    <text class="tip">登录代表同意《用户须知》</text>
+  </view>
+
+  <view class="safe-tip">
+    我们的服务器和应用都不会存储您的密码，您不必担心密码安全问题，请放心绑定！
+  </view>
+</view>

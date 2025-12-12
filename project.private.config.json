@@ -1,0 +1,9 @@
+{
+  "setting": {
+    "skylineRenderEnable": false,
+    "urlCheck": false,
+    "compileHotReLoad": true,
+    "bigPackageSizeSupport": true,
+    "autoAudits": false
+  }
+}

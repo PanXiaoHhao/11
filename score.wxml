@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="title">我的查询中心</view>
+  
+  <!-- 加载状态 -->
+  <view class="loading" wx:if="{{loading}}">
+    <view class="loading-text">数据加载中...</view>
+  </view>
+  
+  <!-- 错误提示 -->
+  <view class="error" wx:if="{{!loading && error}}">
+    <view class="error-text">{{error}}</view>
+  </view>
+  
+  <!-- 考试数据表格 -->
+  <view class="table" wx:if="{{!loading && !error}}">
+    <view class="table-header">
+      <text class="c1">课程名称</text>
+      <text class="c2">学分</text>
+      <text class="c3">考核方式</text>
+      <text class="c4">状态</text>
+    </view>
+    <view class="table-row" wx:for="{{examList}}" wx:key="index">
+      <text class="c1">{{item.courseName}}</text>
+      <text class="c2">{{item.credit}}</text>
+      <text class="c3">{{item.examMethod}}</text>
+      <text class="c4">{{item.status}}</text>
+    </view>
+    <!-- 数据为空时的提示 -->
+    <view class="empty" wx:if="{{examList.length === 0}}">
+      <view class="empty-text">暂无考试安排数据</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+.page { padding: 0 80rpx; min-height: 100vh; box-sizing: border-box; background-color: #fff9e6; }
+
+.header { text-align: center; padding-top: 200rpx; }
+.big-title { font-size: 36rpx; color: #000; font-weight: 500; }
+.school { font-size: 56rpx; font-weight: bold; color: #000; display: block; margin-top: 60rpx; }
+
+.form { margin-top: 180rpx; }
+.input { height: 100rpx; background: #fff; border-radius: 50rpx; padding: 0 50rpx; font-size: 32rpx; margin-bottom: 40rpx; box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.06); }
+
+.login-btn { height: 100rpx; line-height: 100rpx; background: linear-gradient(to bottom, #ffd700, #ffb800); border-radius: 50rpx; color: #000; font-size: 36rpx; font-weight: bold; box-shadow: 0 8rpx 20rpx rgba(255,183,0,0.4); }
+
+.tip { display: block; text-align: center; color: #999; font-size: 28rpx; margin-top: 40rpx; }
+
+.safe-tip { position: fixed; bottom: 80rpx; left: 80rpx; right: 80rpx; text-align: center; color: #aaa; font-size: 26rpx; line-height: 1.6; }
+
+/* 错误提示样式 */
+.error-tip {
+  color: #e64340; /* 红色 */
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  min-height: 40rpx; /* 避免闪烁 */
+}

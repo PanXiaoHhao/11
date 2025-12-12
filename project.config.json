@@ -1,0 +1,13 @@
+{
+  "setting": {
+    "swc": true,
+    "disableSWC": false,
+    "compileWorklet": true,
+    "condition": true,
+    "enhance": true,
+    "es6": true,
+    "postcss": true,
+    "uglifyFileName": true,
+    "minified": true
+  }
+}

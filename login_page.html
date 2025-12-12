@@ -1,0 +1,696 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KINGOSOFT��У�ǻ�У԰��ѧ�ۺϷ���ƽ̨
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=GBK"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="�������,�ǻ�У԰,��ѧϵͳ����ѧ����">
+    <meta http-equiv="description" content="KINGOSOFT��У�ǻ�У԰��ѧ�ۺϷ���ƽ̨">
+    <link rel='stylesheet' type='text/css' media='screen'
+          href='/rzzyjw/frame/themes/kingo/css/style_logindl.css?t=63046176550898327122532'></link>
+    <link rel="stylesheet" type='text/css' media='screen'
+          href="/rzzyjw/custom/skin/blue/ymPrompt.css"></link>
+    <script type="text/javascript">
+        javascript:window.history.forward(1);
+        var yzmbt = "0";
+        var _webRootPath = "/rzzyjw/";
+        var _sessionid = "07EE05B86FCA40FCDE6FAC9A1C9F86A3";
+        var schoolcode = "14716";
+        var modename = "kingo";
+    </script>
+    <script type="text/javascript"
+            src="/rzzyjw/custom/js/SetKingoEncypt.jsp?t=35959176550898327139618"
+            id="kingo_encypt"></script>
+    <script type="text/javascript"
+            src="/rzzyjw/custom/js/GetKingoEncypt.jsp?t=94802176550898327134577"
+            id="kingo_getencypt"></script>
+    <script type="text/javascript" src='/rzzyjw/frame/themes/kingo/js/jQuery1.8.js?v=20251024'></script>
+    <script type="text/javascript" src='/rzzyjw/frame/themes/kingo/js/jquery.cookie.js'></script>
+    <script type="text/javascript"
+            src="/rzzyjw/custom/js/md5.js?t=87381176550898327107603"></script>
+    <script type="text/javascript"
+            src="/rzzyjw/custom/js/base64.js?t=11812176550898327172371"></script>
+    <script type="text/javascript"
+            src="/rzzyjw/custom/js/json2.js?t=40895176550898327108954"></script>
+    <script type="text/javascript" src="/rzzyjw/custom/js/ymPrompt.js"></script>
+    <script type="text/javascript" src='/rzzyjw/frame/themes/kingo/js/qrcode.js'></script>
+    <script type="text/javascript" src='/rzzyjw/frame/themes/kingo/js/utf.js'></script>
+    <script type="text/javascript"
+            src="/rzzyjw/frame/themes/kingo/js/loginbar.js?t=79503176550898327141227"></script>
+
+    <style>
+        .inp {
+            color: #ccc;
+        }
+
+        .inps {
+            color: #198DF6;
+        }
+
+        .required {
+            color: #ccc;
+        }
+
+        .focus {
+            border: 1px solid #49ACFF;
+        }
+
+        .qrCodeCompatible {
+            margin-left: 105px;
+            font-weight: bold;
+        }
+
+        .box {
+            width: 280px;
+            height: 100px;
+            position: relative;
+        }
+
+        ul {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -40px;
+            width: 340px;
+            height: 260px;
+            padding-left: 48%;
+
+        }
+
+        ul li {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 1px;
+            list-style-type: none;
+        }
+
+        ul li img {
+            width: 340px;
+            height: 260px;
+
+        }
+
+        ol {
+            position: absolute;
+            bottom: 20px;
+            left: 43%;
+            top: 280px;
+        }
+
+        ol li {
+            list-style-type: none;
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ccc;
+            line-height: 30px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .sp_xx {
+            display: inline-block;
+            width: 50px;
+            height: 60px;
+            background: #f2f2f2;
+            color: pink;
+            text-align: center;
+            line-height: 60px;
+            font-size: 60px;
+            position: absolute;
+            top: 5%;
+        }
+
+        #left {
+            left: 10px;
+        }
+
+        #right {
+            right: 472px;
+        }
+
+        ul .active {
+            display: block !important;
+        }
+
+        ol .active {
+            background: #fff;
+        }
+
+        .tpwd {
+            position: relative;
+        }
+
+        .tpwd img {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            width: 20px;
+        }
+
+        .tpwd input::-ms-clear {
+            display: none;
+        }
+
+        .tpwd input::-ms-reveal {
+            display: none;
+        }
+
+    </style>
+    <script language="javascript">
+        var uuid16;
+        var scanflag = false;
+        var isXqeScanQrCode = true;
+        var interceptEvent = true;
+        window.onload = function () {
+            if ("1" == "1") {
+                document.getElementById("sp_xl").style.display = "";
+                if ("1" == "1") {
+                    document.getElementById("sp_zxsj").style.display = "";
+                }
+                else {
+                    document.getElementById("sp_xl").style.marginLeft = "135px";
+                    document.getElementById("sp_zxsj").style.display = "none";
+                }
+            }
+            else {
+                document.getElementById("sp_xl").style.display = "none";
+                document.getElementById("sp_zxsj").style.marginLeft = "135px";
+                if ("1" == "1") {
+                    document.getElementById("sp_zxsj").style.display = "";
+                }
+                else {
+                    document.getElementById("sp_zxsj").style.display = "none";
+                }
+            }
+
+            if ("14716" == "10718") {//����ʦ����ѧ
+                document.getElementById("sp_jsizt").style.display = "";
+                if ("1" == "1" && "1" == "1") {
+                    document.getElementById("sp_xl").style.marginLeft = "62px";
+                }
+                else if ("1" == "1" && "1" == "0") {
+                    document.getElementById("sp_xl").style.marginLeft = "108px";
+                }
+                else if ("1" == "0" && "1" == "1") {
+                    document.getElementById("sp_zxsj").style.marginLeft = "88px";
+                }
+                else {
+                    document.getElementById("sp_jsizt").style.marginLeft = "135px";
+                }
+            }
+
+            if ("14716" == "12764") {//�Ĵ�����ְҵ����ѧԺ
+                document.getElementById("sp_dl").style.display = "";
+                document.getElementById("sp_xl").style.marginLeft = "";
+                if ("1" == "1" && "1" == "1") {
+                    document.getElementById("sp_dl").style.marginLeft = "48px";
+                }
+                else if ("1" == "1" && "1" == "0") {
+                    document.getElementById("sp_dl").style.marginLeft = "94px";
+                }
+                else if ("1" == "0" && "1" == "1") {
+                    document.getElementById("sp_dl").style.marginLeft = "74px";
+                    document.getElementById("sp_zxsj").style.marginLeft = "";
+                }
+                else {
+                    document.getElementById("sp_dl").style.marginLeft = "121px";
+                }
+            }
+
+            if ("14716" == "12810") {//�����Ĵ���Ϣ����ѧԺ
+                document.getElementById("sp_xwzkz").style.display = "";
+                document.getElementById("sp_ckkscj").style.display = "";
+                document.getElementById("sp_xl").style.marginLeft = "24px";
+
+                if ("1" == "1" && "1" == "1") {
+                    document.getElementById("sp_zxsj").style.marginLeft = "20px";
+                    document.getElementById("sp_xwzkz").style.marginLeft = "20px";
+                    document.getElementById("sp_ckkscj").style.marginLeft = "20px";
+                }
+                else if ("1" == "1" && "1" == "0") {
+                    document.getElementById("sp_xl").style.marginLeft = "34px";
+                    document.getElementById("sp_xwzkz").style.marginLeft = "20px";
+                    document.getElementById("sp_ckkscj").style.marginLeft = "20px";
+                }
+                else if ("1" == "0" && "1" == "1") {
+
+                    document.getElementById("sp_zxsj").style.marginLeft = "34px";
+                    document.getElementById("sp_xwzkz").style.marginLeft = "20px";
+                    document.getElementById("sp_ckkscj").style.marginLeft = "20px";
+
+                }
+                else {
+                    document.getElementById("sp_xwzkz").style.marginLeft = "84px";
+                    document.getElementById("sp_ckkscj").style.marginLeft = "20px";
+                }
+            }
+
+            if (yzmbt == "1") {
+                document.getElementById("hid_flag").value = "";
+                document.getElementById("randnumber1").className = "tx3";
+                document.getElementById("randnumber1").disabled = false;
+                document.getElementById("sp_random").style.display = "none";
+            }
+            var username = jQuery.cookie("login_name");
+            if (username) {
+                document.getElementById("username").value = username;
+            }
+        };
+
+        jQuery(document).keypress(function (e) {
+            // �س����¼�
+            if (e.which == 13) {
+                checkrand();
+            }
+        });
+
+        jQuery(document).ready(function () {
+
+            jQuery(".tx1").focus(function () {
+                jQuery('.tab1').addClass('focus');
+                if (jQuery(this).val() == '�˺�') {
+                    jQuery(this).val('');
+                }
+                if (jQuery(this).attr('id') == 'username1') {
+                    jQuery(this).hide();
+                    jQuery('#username').show();
+                    jQuery('#username').focus();
+                }
+            });
+            jQuery(".tx1").blur(function () {
+                jQuery('.tab1').removeClass('focus');
+                if (jQuery(this).attr('id') == 'username' && jQuery(this).val() == '') {
+                    jQuery(this).hide();
+                    jQuery('#username1').show();
+                    jQuery('#username1').val('�˺�');
+                }
+
+            });
+            jQuery(".tx2").focus(function () {
+                jQuery('.tab2').addClass('focus');
+                if (jQuery(this).val() == '����') {
+                    jQuery(this).val('');
+                }
+                if (jQuery(this).attr('id') == 'password1') {
+                    jQuery(this).hide();
+                    jQuery('#password').show();
+                    jQuery('#password').focus();
+                }
+            });
+            jQuery(".tx2").blur(function () {
+                jQuery('.tab2').removeClass('focus');
+                if (jQuery(this).attr('id') == 'password' && jQuery(this).val() == '') {
+                    jQuery(this).hide();
+                    jQuery('#password1').show();
+                    jQuery('#password1').val('����');
+                }
+
+            });
+
+            jQuery(".tx3").focus(function () {
+                jQuery('.tab3').addClass('focus');
+                if (jQuery(this).val() == '��֤��') {
+                    jQuery(this).val('');
+                }
+                if (jQuery(this).attr('id') == 'randnumber1') {
+                    jQuery(this).hide();
+                    jQuery('#randnumber').show();
+                    jQuery('#randnumber').focus();
+                }
+            });
+            jQuery(".tx3").blur(function () {
+                jQuery('.tab3').removeClass('focus');
+                if (jQuery(this).attr('id') == 'randnumber' && jQuery(this).val() == '') {
+                    jQuery(this).hide();
+                    jQuery('#randnumber1').show();
+                    jQuery('#randnumber1').val('��֤��');
+                }
+
+            });
+
+            //jQuery(".bottom-extends").css("display","none");
+            jQuery("#pub-xl").click(function () {
+                var url = _webRootPath + "public/SchoolCalendar.jsp";
+                window.document.location.href = url;
+            });
+
+            jQuery("#pub-timetable").click(function () {
+                var url = _webRootPath + "public/SchoolTimetable.jsp";
+                window.document.location.href = url;
+            });
+
+            jQuery("#pub-notice").click(function () {
+                var url = _webRootPath + "public/SchoolNotice.jsp";
+                window.document.location.href = url;
+            });
+
+            jQuery("#pub-jsizt").click(function () {
+                var url = _webRootPath + "public/kbbp.ckjsizt.html";
+                window.document.location.href = url;
+            });
+
+            jQuery("#pub-dl").click(function () {
+                var url = _webRootPath + "caslogin";
+                window.document.location.href = url;
+            });
+
+            jQuery("#sp_xwzkz").click(function () {
+                var url = _webRootPath + "kssw/zgks.xwkszkz.html?flag=0";
+                window.document.location.href = url;
+            });
+
+            jQuery("#sp_ckkscj").click(function () {
+                var url = _webRootPath + "kssw/zgks.xwkszkz.html?flag=1";
+                window.document.location.href = url;
+            });
+
+        });
+
+    </script>
+    <script type="text/javascript">
+        var s = window.screen.availHeight + "px";
+        var x = (window.screen.availHeight - 420) / 2 + "px";
+
+        (function () {
+            var explorer = window.navigator.userAgent.toLowerCase();
+            var versionIsOk = true;
+            //ie
+            if (explorer.indexOf("msie") >= 0) {
+                var ver = parseInt(explorer.match(/msie ([\d.]+)/)[1]);
+                if (ver < 11) {
+                    versionIsOk = false;
+                    location.href = "/rzzyjw/frame/version.html";
+                }
+            }
+            // ie11
+            else if (explorer.indexOf("trident") >= 0) {
+                var ver = parseInt(explorer.match(/rv:([\d.]+)/)[0].replace("rv:", ""));
+            }
+            //firefox
+            else if (explorer.indexOf("firefox") >= 0) {
+                var ver = explorer.match(/firefox\/([\d.]+)/)[1];
+            }
+            //Chrome
+            else if (explorer.indexOf("chrome") >= 0) {
+                var ver = explorer.match(/chrome\/([\d.]+)/)[1];
+            }
+            //Opera
+            else if (explorer.indexOf("opera") >= 0) {
+                var ver = explorer.match(/opera.([\d.]+)/)[1];
+            }
+            //Safari
+            else if (explorer.indexOf("safari") >= 0) {
+                var ver = explorer.match(/version\/([\d.]+)/)[1];
+            } else {
+                // other
+                versionIsOk = false;
+                location.href = "/rzzyjw/frame/version.html";
+            }
+        }());
+
+    </script>
+
+</head>
+<body topmargin="0" marginwidth="0" marginheight="0" scroll="no" align="center">
+<div id="banner">
+    <div class="mainbanner" style="margin-top:100px;">
+        <script type="text/javascript">
+            var _width = window.screen.availWidth;
+            var _bgimg = "/rzzyjw/frame/themes/kingo/images/bg.png";
+            if (_width > 1440) {
+                _bgimg = "/rzzyjw/frame/themes/kingo/images/bg-1920.png";
+            }
+            document.write(' <img src="' + _bgimg + '" width="100%" height="' + s + '" align="center"/>');
+        </script>
+    </div>
+
+    <script type="text/javascript">
+        document.write('<div class="main-div" style="margin-top:' + x + ';"> ');
+    </script>
+
+    <div class="top_bg"></div>
+    <div class="logo-div" style="text-align: left;">
+        <table width="100%" height="100%" border="0"><tr><td>
+        <img src="/rzzyjw/frame/themes/kingo/images/banner.png" style="margin-top: 30px;">
+        <img src="/rzzyjw/frame/themes/kingo/images/appname.png"
+             style="margin-top: 35px;margin-left: 20px;"><div  style="margin-top: 35px;margin-left: 20px;font-family:Microsoft YaHei;color: #1D47CE;font-size: 16pt;font-weight: normal;display:none;">&ensp;&ensp;KINGOSOFT��У�ǻ�У԰��ѧ�ۺϷ���ƽ̨</div></td><td style="text-align: center;">
+        <img src="/rzzyjw/frame/themes/kingo/images/xiaoxun.png" style="display:none;margin-top: 30px;margin-left: 50px;margin-right: 150px;" /></td>
+            </tr></table>
+    </div>
+
+    <div class="login-div">
+        <div class="login-div-float">
+            
+        </div>
+        <div class="login-div-title">
+            <img id="loginImg" class='loginImg' src="/rzzyjw/frame/themes/kingo/images/1.png"
+                 style="width:190px"/>
+            <img id="loginImg1" class='loginImg' src="/rzzyjw/frame/themes/kingo/images/5.png"
+                 style="width:190px;"/>
+        </div>
+        <div class="login-info-div" id="login-info-div">
+            <table cellpadding=0 cellspacing=0 border=0 width="100%" height="350px"
+                   style="border-left:0px solid #FFFFFF;">
+                <tr>
+                    <td class="login-td" valign="top">
+                        <form id="dosub" name="dosub" method="post" action="">
+                            <input type="hidden" id="txt_mm_expression" name="txt_mm_expression" value=""/>
+                            <input type="hidden" id="txt_mm_length" name="txt_mm_length" value=""/>
+                            <input type="hidden" id="txt_mm_userzh" name="txt_mm_userzh" value=""/>
+                            <input type="hidden" id="hid_flag" name="hid_flag" value="1"/>
+                            <input type="hidden" id="hid_dxyzm" name="hid_dxyzm" value=""/>
+                            <input type="hidden" id="hid_sjhm" name="hid_sjhm" value=""/>
+                            <div class="login-table">
+                                <div class="tab1">
+                                    <table>
+                                        <tr>
+                                            <td width="45px" style="border-right:1px solid #ccc;text-align:center">
+                                                <img src="/rzzyjw/frame/themes/kingo/images/username.png"
+                                                     style="width: 24px;height: 24px;">
+                                            </td>
+                                            <td width="150px" height="32px;">
+                                                <input type="text" value="�˺�" id="username1" class="tx1"
+                                                       style="color:#ccc;" maxlength="20"/>
+                                                <input type="text" id="username" name="username" class="tx1"
+                                                       tabindex="1" maxlength="20" style="display:none;outline:none;"/>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab2">
+                                    <table>
+                                        <tr>
+                                            <td width="45px" style="border-right:1px solid #ccc;text-align:center">
+                                                <img src="/rzzyjw/frame/themes/kingo/images/password.png"
+                                                     style="width: 24px;height: 24px;">
+                                            </td>
+                                            <td width="150px" height="32px;">
+                                                <input type="text" value="����" id="password1" maxlength="30" tabindex="2"
+                                                       class="tx2" style="color:#ccc;" autocomplete="off"/>
+                                                <div class="tpwd" style="text-align: right;"><label id="lbl_img"
+                                                                                                    style="display: none"><img
+                                                        src="/rzzyjw/frame/images/close.png" id="eye"/></label>
+                                                    <input id="password" name="password" class="tx2" maxlength="30"
+                                                           type="password" tabindex="2" onblur="checkpwd(this)"
+                                                           onkeyup="checkpwd(this)" style="display:none;outline:none;"
+                                                           autocomplete="off"/></div>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab3 txDisable">
+                                    <table width="100%">
+                                        <tr>
+                                            <td width="45px" style="border-right:1px solid #ccc;text-align:center">
+                                                <img src="/rzzyjw/frame/themes/kingo/images/validate.png"
+                                                     style="width: 24px;height: 24px;">
+                                            </td>
+                                            <td width="80px" height="32px">
+                                                <input type="text" value="��֤��" name="randnumber1" id="randnumber1"
+                                                       tabindex="3" class="tx3 txDisable" style="color:#ccc;" disabled
+                                                       onfocus="refreshImg('0')"/>
+                                                <input type="text" name="randnumber" id="randnumber" class="tx3"
+                                                       tabindex="3" maxlength="4"
+                                                       style="display:none;outline:none;"/>
+                                            </td>
+                                            <td align="left" height="32px;"><span id="sp_random"
+                                                                                  style="font-size:14px;color: gray;">������� ����֤��</span>
+                                                <img id="randpic" onclick="refreshImg('1')" name="randpic" alt="��֤��"
+                                                     title="������ɻ�ˢ����֤��" style="display:none;"/>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="bottom-link">
+                                    <span><input type="checkbox" name="setCookie" id="setCookie"><label for="setCookie">��ס�˺�</label></span>
+                                    <a href="javascript:void(0);" onclick="doMobileReset()" style="color:#067cdc">��������</a>
+                                </div>
+                                <div class="bottom-msg">
+                                    <label id="msg" name="msg" style="display:block;"></label>
+                                </div>
+                                <input type="button" id="login" name="login" class="login" value=""
+                                       tabindex="4" onclick="checkrand();"
+                                       onmouseover="loginmouseover();" onmouseout="loginmouseout();"/>
+                                <div class="public-link" style="width:320px;">
+												<span id="sp_dl" style="display: none;padding-top: 10px;">
+													<a id="pub-dl">ͳһ��֤��¼</a>
+												</span>
+                                    <span id="sp_xl" style="margin-left: 108px; padding-top: 10px;">
+													<a id="pub-xl">У��</a>
+												</span>
+                                    <span id="sp_zxsj" style="padding-top: 10px;">
+													<a id="pub-timetable">��Ϣʱ��</a>
+												</span>
+                                    <span style="display: none; padding-top: 10px;">
+													<a id="pub-notice">֪ͨ����</a>
+												</span>
+                                    <span id="sp_jsizt" style="display: none; padding-top: 10px;">
+													<a id="pub-jsizt">����״̬</a>
+												</span>
+                                    <span id="sp_xwzkz" style="display: none; padding-top: 10px;">
+													<a id="pub-xwzkz">��ӡ׼��֤</a>
+												</span>
+                                    <span id="sp_ckkscj" style="display: none; padding-top: 10px;">
+													<a id="pub-ckkscj">�鿴�ɼ�</a>
+												</span>
+                                </div>
+                            </div>
+                        </form>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="login-info-div1" id="login-info-div1">
+            <div id="qrCode" class="qrCode" style="text-align:center;"></div>
+            
+            <br/>
+            <br/>
+            ʹ�� <a style="color:blue;font-size:16px;" href='http://www.xiqueer.com/'>ϲȵ��</a> ɨ���ά��
+        </div>
+
+    </div>
+
+    <div class="bottom-tips">
+    </div>
+    <div class="bottom_bg"
+          >
+        
+       
+            &copy;
+        2000-2025 By <a href="http://www.kingosoft.com" target="_blank">��������������޹�˾</a> All Rights Reserved
+        
+        <a href="/rzzyjw/frame/version.html" target="_blank" style="font-family: '΢���ź�'; text-decoration: underline;padding-left: 20px">���л���ָ��</a>
+        
+    </div>
+</div>
+</body>
+<script language="javascript">
+    if (document.getElementById("randnumber1").className == "tx3 txDisable") {
+        document.getElementById("randnumber1").disabled = true;
+        document.getElementById("hid_flag").value = "1";
+        document.getElementById("sp_random").style.display = "";
+        document.getElementById("randpic").style.display = "none";
+    }
+    document.getElementById("login").style.backgroundImage = "url(" + _webRootPath + "frame/themes/kingo/images/login.png)";
+
+    var eye = document.getElementById("eye");
+    var psd = document.getElementById("password");
+    var flag = 0;
+    eye.onclick = function chkeye() {
+        if (flag == 0) {
+            psd.type = "text";
+            eye.src = "/rzzyjw/frame/images/open.png";
+            flag = 1;
+        }
+        else {
+            psd.type = "password";
+            eye.src = "/rzzyjw/frame/images/close.png";
+            flag = 0;
+        }
+    }
+
+    //��ȡ�ڵ�
+    var box = document.getElementsByClassName("box")[0]
+    var ul_li = document.querySelectorAll("ul li")
+    var ol_li = document.querySelectorAll("ol li")
+    var left = document.getElementById("left")
+    var right = document.getElementById("right")
+
+    var timer = null,
+        index = 0;
+
+    //��װ
+    function xuan() {
+        index++//�±�
+        if (index >= ul_li.length) {
+            index = 0//�±��0��ʼ
+        }
+        content(index)
+    }
+
+    //��װ����
+    function content(index) {
+        for (var i = 0; i < ul_li.length; i++) {//����
+            ul_li[i].classList.remove("active")
+            ol_li[i].classList.remove("active")
+        }
+        ul_li[index].classList.add("active")
+        ol_li[index].classList.add("active")
+    }
+
+    //�ұߵ��
+    right.onclick = xuan
+    //��ߵ��
+    left.onclick = function () {
+        index--
+        if (index < 0) {//�±�<0,�±�=ul li�ĳ���-1
+            index = ul_li.length - 1
+        }
+    }
+    //��������ĺ���
+    timer = setInterval(xuan, 3000)//��ʱ��
+    //�������box����ð��
+    box.onmouseenter = function () {
+        //�����ʱ��
+        clearInterval(timer)
+        timer = null
+    }
+    ////����Ƴ�box����ð��
+    box.onmouseleave = function () {
+        timer = setInterval(xuan, 3000)
+    }
+    for (var q = 0; q < ol_li.length; q++) {
+        ol_li[q].ind = q;
+        ol_li[q].onclick = function () {//����
+            index = this.ind
+            content(this.ind)
+        }
+    }
+
+</script>
+</html>

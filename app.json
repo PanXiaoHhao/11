@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/score/score"
+  ],
+  "window": {
+    "backgroundColor": "#fff9e6",
+    "navigationBarBackgroundColor": "#fff9e6",
+    "navigationBarTitleText": "汝州职业技术学院",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2"
+}
